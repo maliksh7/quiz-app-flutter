@@ -5,12 +5,18 @@ import 'package:google_fonts/google_fonts.dart';
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
 
+  /**
+   * define callback functions that can be triggered in response to certain events,
+   * such as button clicks or state changes.
+  */ ///
   final void Function() startQuiz;
 
   @override
   Widget build(context) {
     return Center(
       child: Column(
+        // Minimize the amount of free space along the main
+        // axis, subject to the incoming layout constraints.
         mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
